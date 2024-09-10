@@ -22,5 +22,5 @@ RUN  docker-php-ext-install pgsql
 RUN  docker-php-ext-install opcache
 
 #increase Imagick limits
-COPY ./policy.xml /etc/ImageMagick-v6/policy.xml
+COPY ./policy.xml /etc/ImageMagick-6/policy.xml
 USER www
