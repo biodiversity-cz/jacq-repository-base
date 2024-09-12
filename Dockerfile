@@ -1,4 +1,4 @@
-FROM ghcr.io/krkabol/php-fpm-noroot-socket:main@sha256:3763472274b739d0ceb9fe3566d1a61aac2b9e3266318d1ff7cd40b711d7fa91
+FROM ghcr.io/krkabol/php-fpm-noroot-socket:main@sha256:08706b27cc6adce77c2d82eaf740872c705fd14a4b31ef86955c1cdf35cb20a4
 USER root
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
@@ -22,5 +22,5 @@ RUN  docker-php-ext-install pgsql
 RUN  docker-php-ext-install opcache
 
 #increase Imagick limits
-COPY ./policy.xml /etc/ImageMagick-v6/policy.xml
+COPY ./policy.xml /etc/ImageMagick-6/policy.xml
 USER www

@@ -59,10 +59,10 @@
   <!-- <policy domain="resource" name="temporary-path" value="/tmp"/> -->
   <policy domain="resource" name="memory" value="3GiB"/>
   <policy domain="resource" name="map" value="3GiB"/>
-  <policy domain="resource" name="width" value="20KP"/>
-  <policy domain="resource" name="height" value="20KP"/>
+  <policy domain="resource" name="width" value="16KP"/>
+  <policy domain="resource" name="height" value="16KP"/>
   <!-- <policy domain="resource" name="list-length" value="128"/> -->
-  <policy domain="resource" name="area" value="160MP"/>
+  <policy domain="resource" name="area" value="128MP"/>
   <policy domain="resource" name="disk" value="3GiB"/>
   <!-- <policy domain="resource" name="file" value="768"/> -->
   <!-- <policy domain="resource" name="thread" value="4"/> -->
