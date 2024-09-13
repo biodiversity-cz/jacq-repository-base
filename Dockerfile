@@ -29,11 +29,11 @@ RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/re
     # <<< End of Imagick installation
 
 RUN  docker-php-ext-enable imagick && \
-     docker-php-ext-install pdo
-
-RUN  docker-php-ext-install pdo_pgsql
-RUN  docker-php-ext-install pgsql
-RUN  docker-php-ext-install opcache
+     docker-php-ext-install pdo && \
+     docker-php-ext-install intl && \
+     docker-php-ext-install pdo_pgsql && \
+     docker-php-ext-install pgsql && \
+     docker-php-ext-install opcache
 
 #increase Imagick limits
 COPY ./policy.xml /etc/ImageMagick-6/policy.xml
