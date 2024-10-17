@@ -33,7 +33,8 @@ RUN  docker-php-ext-enable imagick && \
      docker-php-ext-install intl && \
      docker-php-ext-install pdo_pgsql && \
      docker-php-ext-install pgsql && \
-     docker-php-ext-install opcache
+     docker-php-ext-install opcache && \
+     docker-php-ext-install exif
 
 #increase Imagick limits
 COPY ./policy.xml /etc/ImageMagick-6/policy.xml
