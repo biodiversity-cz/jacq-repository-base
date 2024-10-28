@@ -1,4 +1,4 @@
-FROM ghcr.io/krkabol/php-fpm-noroot-socket:main@sha256:c3ed1b2b2cc688073f1c581016e2ef39b6d76f3cf298cccd2402a60679a8ebd9
+FROM ghcr.io/krkabol/php-fpm-noroot-socket:main@sha256:13cc50f4b830c4f06f0ef77262a4373f87699c2fdc6db70f1ca0a73262d9c748
 USER root
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \
