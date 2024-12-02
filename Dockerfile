@@ -18,7 +18,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
 # Imagick is installed from the archive because regular installation fails
 # See: https://github.com/Imagick/imagick/issues/643#issuecomment-1834361716
 ARG IMAGICK_VERSION=3.7.0
-RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/refs/tags/${IMAGICK_VERSION}.tar.gz \
+RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/tags/${IMAGICK_VERSION}.tar.gz \
     && tar --strip-components=1 -xf /tmp/imagick.tar.gz \
     && phpize \
     && ./configure \
