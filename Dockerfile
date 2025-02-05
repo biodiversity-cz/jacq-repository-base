@@ -1,4 +1,9 @@
-FROM ghcr.io/krkabol/php-fpm-noroot-socket:main@sha256:57a5784e62ad84ce51a3bd0ed4c2fba594a1bfe2e54bde489959f2f2fa21deb2
+FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:d8daed20770bd77583a27b29a135a7ee409129fea6d7b161d1511bc98f67b77f
+
+MAINTAINER Petr Novotný <novotp@natur.cuni.cz>
+LABEL org.opencontainers.image.source=https://github.com/biodiversity-cz/jacq-repository-base
+LABEL org.opencontainers.image.description="base image for JACQ CZ repository"
+
 USER root
 RUN apt-get update && apt-get dist-upgrade -y && \
     apt-get install -y --no-install-recommends \

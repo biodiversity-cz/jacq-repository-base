@@ -1,4 +1,3 @@
 # curator_base
-base image for curator app
+base Docker image for [JACQ image repository](https://github.com/biodiversity-cz/jacq-repository).
 
-to build locally ```docker build --pull . -t  ghcr.io/krkabol/curator_base:main``` & ```docker push  ghcr.io/krkabol/curator_base:main```
