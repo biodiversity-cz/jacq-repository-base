@@ -41,8 +41,6 @@ RUN  docker-php-ext-enable imagick && \
      docker-php-ext-install opcache && \
      docker-php-ext-install exif
 
-RUN echo "memory_limit=1000M" > /usr/local/etc/php/conf.d/memory-limit.ini
-
 #increase Imagick limits
 COPY ./policy.xml /etc/ImageMagick-6/policy.xml
 USER www
