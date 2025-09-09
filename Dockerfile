@@ -18,20 +18,9 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         apt-get autoremove -y && \
         rm -rf /var/lib/apt/lists/* /var/lib/log/* /tmp/* /var/tmp/*
 
-# https://gist.github.com/Wirone/d5c794b4fef0203146a27687e80588a6
-#RUN  pecl install imagick-3.7.0
-# Imagick is installed from the archive because regular installation fails
-# See: https://github.com/Imagick/imagick/issues/643#issuecomment-1834361716
-ARG IMAGICK_VERSION=3.7.0
-RUN curl -L -o /tmp/imagick.tar.gz https://github.com/Imagick/imagick/archive/tags/${IMAGICK_VERSION}.tar.gz \
-    && tar --strip-components=1 -xf /tmp/imagick.tar.gz \
-    && phpize \
-    && ./configure \
-    && make \
-    && make install \
-    && echo "extension=imagick.so" > /usr/local/etc/php/conf.d/ext-imagick.ini \
-    && rm -rf /tmp/*
-    # <<< End of Imagick installation
+RUN  pecl install imagick
+# if Imagick failed, see: https://github.com/Imagick/imagick/issues/643#issuecomment-1834361716
+
 
 RUN  docker-php-ext-enable imagick && \
      docker-php-ext-install pdo && \
