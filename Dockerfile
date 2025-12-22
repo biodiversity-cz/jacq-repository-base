@@ -12,7 +12,8 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         libgraphicsmagick1-dev \
         libmagickwand-dev \
         libpq-dev \
-        zbar-tools && \
+        zbar-tools \
+        libzip-dev && \
         apt-get autoclean -y && \
         apt-get remove -y wget && \
         apt-get autoremove -y && \
