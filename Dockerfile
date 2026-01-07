@@ -11,7 +11,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
         imagemagick \
         libgraphicsmagick1-dev \
         libmagickwand-dev \
-        openjpeg-tools \
+        libopenjp2-tools \
         libpq-dev \
         zbar-tools \
         libzip-dev && \
