@@ -34,4 +34,7 @@ RUN  docker-php-ext-enable imagick && \
 
 #increase Imagick limits
 COPY ./policy.xml /etc/ImageMagick-6/policy.xml
+
+COPY ./www.conf /usr/local/etc/php-fpm.d/zz-docker.conf
+
 USER www
