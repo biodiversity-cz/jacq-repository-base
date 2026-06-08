@@ -1,4 +1,4 @@
-FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:21d917553841403e6ffafc52d797f886873dbebc540652159f9b7199cfe6f1f7
+FROM ghcr.io/biodiversity-cz/php-fpm-noroot-socket:main@sha256:9738a34ca47cd8f2b8abae0cd4e96f03d001e7242febc419309243126e221a20
 
 MAINTAINER Petr Novotný <novotp@natur.cuni.cz>
 LABEL org.opencontainers.image.source=https://github.com/biodiversity-cz/jacq-repository-base
