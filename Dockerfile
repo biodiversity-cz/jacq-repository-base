@@ -23,13 +23,7 @@ RUN apt-get update && apt-get dist-upgrade -y && \
 RUN  pecl install imagick
 # if Imagick failed, see: https://github.com/Imagick/imagick/issues/643#issuecomment-1834361716
 
-
 RUN  docker-php-ext-enable imagick && \
-     docker-php-ext-install pdo && \
-     docker-php-ext-install intl && \
-     docker-php-ext-install pdo_pgsql && \
-     docker-php-ext-install pgsql && \
-     docker-php-ext-install zip && \
      docker-php-ext-install exif
 
 #increase Imagick limits
